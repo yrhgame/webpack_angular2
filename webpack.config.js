@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
-var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
-var uglifyJsPlugin = require("webpack/lib/optimize/uglifyJsPlugin");
+//var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+//var uglifyJsPlugin = require("webpack/lib/optimize/uglifyJsPlugin");
 
 function getEntry(dir) {
     var fs = require('fs');

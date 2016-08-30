@@ -9,6 +9,9 @@ webpack + es6 + Webpack-dev-server 环境搭建实例
 |-components   // 组件目录，模块文件存放目录，/assets/js/中的入口文件使用
 |-dist         // 编译后的文件存放路径
 |-node_modules // 依赖模块安装目录
+package.json   // 依赖包
+tsconfig.json  // typescript配置文件
+webpack.config.js // webpack配置文件
 index.html     // 测试文件
 </code></pre>
 

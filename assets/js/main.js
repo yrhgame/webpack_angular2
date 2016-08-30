@@ -1,8 +1,6 @@
-require('assets/css/style.css');
-require('nm/rxjs/src/Rx.ts');
-require('nm/angular2/bundles/angular2.dev');
-
-import {bootstrap}    from 'nm/angular2/platform/browser'
-import {AppComponent} from 'components/hello'
+import 'nm/zone.js/dist/zone.js';
+import 'nm/reflect-metadata/Reflect.js';
+import {bootstrap}    from 'angular2/platform/browser';
+import {AppComponent} from 'components/hello';
 
 bootstrap(AppComponent);
