@@ -19,6 +19,9 @@ function getEntry(dir) {
  
 module.exports = {
     entry: getEntry(__dirname),
+    /*entry: {
+        main: path.resolve(__dirname, 'assets/js/main')
+    },*/
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'dist/',
@@ -30,6 +33,9 @@ module.exports = {
     },
     module: {
         loaders: [
+            {
+                test: /\.ts/, exclude: /(node_modules)/, loader: 'ts-loader'
+            },
             {
                 test: /\.css$/, loader: 'style-loader!css-loader'
             },
@@ -47,7 +53,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.json', '.scss'],
+        extensions: ['', '.ts', '.js', '.json', '.scss'],
         alias: {
             nm: path.resolve(__dirname, "node_modules"),
             jquery: path.resolve(__dirname, "node_modules/jquery/dist/jquery.min.js"),
@@ -57,11 +63,11 @@ module.exports = {
     },
     plugins: [
         //js文件的压缩
-        new uglifyJsPlugin({
+        /*new uglifyJsPlugin({
             compress: {
                 warnings: false
             },
             except: ['$super', '$', 'exports', 'require']    //排除关键字
-        })
+        })*/
     ]
 };

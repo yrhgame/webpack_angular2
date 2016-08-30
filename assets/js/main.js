@@ -1,3 +1,8 @@
 require('assets/css/style.css');
-import * as func from 'components/hello.js';
-console.log(func.square(11));
+require('nm/rxjs/src/Rx.ts');
+require('nm/angular2/bundles/angular2.dev');
+
+import {bootstrap}    from 'nm/angular2/platform/browser'
+import {AppComponent} from 'components/hello'
+
+bootstrap(AppComponent);
